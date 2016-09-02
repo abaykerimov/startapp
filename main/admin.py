@@ -2,7 +2,7 @@ from django.contrib import admin
 from main.models import User, Project, Update, ProjectUser
 # Register your models here.
 
-
+"""
 class UserAdmin(admin.ModelAdmin):
     list_display = ('fullname', 'email')
 
@@ -19,3 +19,4 @@ class ProjectUserAdmin(admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectUser, ProjectUserAdmin)
+"""

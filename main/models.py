@@ -1,23 +1,19 @@
 # coding=utf8
-
 from django.db import models
+from django.contrib.auth.models import User
 # Create your models here.
 
 
-class User(models.Model):
+class UserExtend(models.Model):
+    user = models.ForeignKey(User)
     avatar = models.CharField(verbose_name=u'Аватар', max_length=200, blank=True, null=True)
-    username = models.CharField(verbose_name=u'Никнейм', max_length=200, unique=True)
-    fullname = models.CharField(verbose_name=u'ФИО', max_length=200)
-    email = models.EmailField(verbose_name=u'Почта', max_length=200, unique=True)
     phone = models.CharField(verbose_name=u'Телефон', max_length=20, blank=True, null=True, unique=True)
     position = models.CharField(verbose_name=u'Должность', max_length=200)
-    password = models.CharField(verbose_name=u'Пароль', max_length=200)
     status = models.CharField(verbose_name=u'Статус', max_length=200, blank=True, null=True)
     rank = models.CharField(verbose_name=u'Ранг', max_length=200, blank=True, null=True)
     role = models.CharField(verbose_name=u'Роль', max_length=200, blank=True, null=True)
 
     class Meta:
-        ordering = ('fullname', )
         verbose_name = u'Пользователь'
         verbose_name_plural = u'Пользователи'
 
