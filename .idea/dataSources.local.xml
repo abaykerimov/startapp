@@ -7,5 +7,10 @@
       <introspection-scope>startapp_db:</introspection-scope>
       <resolve-scope>startapp_db:</resolve-scope>
     </data-source>
+    <data-source name="MySQL - ikbtukz_abaysys@srv-db-plesk03.ps.kz" uuid="b4308216-a739-460d-a514-fd5ba94761b6">
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>ikbtu_abay</user-name>
+    </data-source>
   </component>
 </project>

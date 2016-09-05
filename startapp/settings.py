@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'startapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'startapp_db',
+        'NAME': 'ikbtukz_abaysys',
         'USER': 'ikbtu_abay',
-        'PASSWORD': 'Xltm38&3Xltm38&3',
+        'PASSWORD': 'Xltm38&3',
         'HOST': 'srv-db-plesk03.ps.kz:3306',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        #'PORT': '3306',
     }
 }
 

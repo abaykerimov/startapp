@@ -925,4 +925,7 @@ model</columns>
       </key>
     </database-model>
   </data-source>
+  <data-source name="MySQL - ikbtukz_abaysys@srv-db-plesk03.ps.kz" uuid="b4308216-a739-460d-a514-fd5ba94761b6">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
