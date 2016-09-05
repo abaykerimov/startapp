@@ -31,10 +31,38 @@ class ProjectUser(models.Model):
         verbose_name_plural = u'Пользователи в проектах'
 
 
+class Category(models.Model):
+    category_name = models.CharField(verbose_name=u'Категория', max_length=200)
+
+    class Meta:
+        ordering = ('category_name', )
+        verbose_name = u'Категория'
+        verbose_name_plural = u'Категории'
+
+    def __str__(self):
+        return self.category_name
+
+
 class Project(models.Model):
+    STATUS_CHOICES = (
+        (0, u'To Do'),
+        (1, u'Doing'),
+        (2, u'Done'),
+        (3, u'Testing'),
+        (4, u'Complete')
+    )
+    category = models.ForeignKey(Category)
     project_name = models.CharField(verbose_name=u'Название проекта', max_length=200, unique=True)
     description = models.TextField(verbose_name=u'Описание проекта')
     created_date = models.DateTimeField(auto_now_add=True)
+    mission = models.CharField(verbose_name=u'Миссия проекта', max_length=400)
+    location = models.CharField(verbose_name=u'Расположение', max_length=200)
+    url = models.CharField(verbose_name=u'Ссылка на проект', max_length=200)
+    date_public = models.DateTimeField(verbose_name=u'Дата основания')
+    target = models.CharField(verbose_name=u'Целевая аудитория', max_length=200)
+    team = models.TextField(verbose_name=u'Участники проекта')
+    contacts = models.CharField(verbose_name=u'Контакты', max_length=400)
+    status = models.IntegerField(verbose_name=u'Статус проекта', choices=STATUS_CHOICES)
     project_user = models.ManyToManyField(to=User, verbose_name=u'Команда проекта', through=ProjectUser)
 
     class Meta:
@@ -100,18 +128,6 @@ class Chat(models.Model):
 
     def __str__(self):
         return self.message
-
-
-class Category(models.Model):
-    category_name = models.CharField(verbose_name=u'Категория', max_length=200)
-
-    class Meta:
-        ordering = ('category_name', )
-        verbose_name = u'Категория'
-        verbose_name_plural = u'Категории'
-
-    def __str__(self):
-        return self.category_name
 
 
 class Comment(models.Model):

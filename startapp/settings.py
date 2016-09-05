@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'startapp_db',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'USER': 'ikbtu_abay',
+        'PASSWORD': 'Xltm38&3Xltm38&3',
+        'HOST': 'srv-db-plesk03.ps.kz:3306',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
