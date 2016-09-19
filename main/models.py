@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 
 class UserExtend(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey('auth.User')
     avatar = models.CharField(verbose_name=u'Аватар', max_length=200, blank=True, null=True)
     phone = models.CharField(verbose_name=u'Телефон', max_length=20, blank=True, null=True, unique=True)
     position = models.CharField(verbose_name=u'Должность', max_length=200)
@@ -17,14 +17,11 @@ class UserExtend(models.Model):
         verbose_name = u'Пользователь'
         verbose_name_plural = u'Пользователи'
 
-    def __str__(self):
-        return self.username
-
 
 class ProjectUser(models.Model):
     isCreator = models.BooleanField(default=False)
     project = models.ForeignKey('main.Project')
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='users')
 
     class Meta:
         verbose_name = u'Пользователи в проектах'

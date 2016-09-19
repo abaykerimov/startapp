@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - startapp_db@localhost" uuid="280e48f0-707a-4d14-8577-547b88313dd4">
+    <data-source name="MySQL - startapp_db@localhost" uuid="da6c30a7-4dca-4796-a7c3-5a3fe7567790">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <introspection-scope>startapp_db:</introspection-scope>
       <resolve-scope>startapp_db:</resolve-scope>
     </data-source>
-    <data-source name="MySQL - ikbtukz_abaysys@srv-db-plesk03.ps.kz" uuid="b4308216-a739-460d-a514-fd5ba94761b6">
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
-      <user-name>ikbtu_abay</user-name>
+    <data-source name="Django default" uuid="8cba6722-2309-4158-9407-4831a1f8aee1">
+      <user-name>root</user-name>
+      <introspection-scope>startapp_db:</introspection-scope>
+      <resolve-scope>startapp_db:</resolve-scope>
     </data-source>
   </component>
 </project>

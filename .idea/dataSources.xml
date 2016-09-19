@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="519039747">
-    <data-source source="LOCAL" name="MySQL - startapp_db@localhost" uuid="280e48f0-707a-4d14-8577-547b88313dd4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1970341680">
+    <data-source source="LOCAL" name="MySQL - startapp_db@localhost" uuid="da6c30a7-4dca-4796-a7c3-5a3fe7567790">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -15,11 +15,13 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="MySQL - ikbtukz_abaysys@srv-db-plesk03.ps.kz" uuid="b4308216-a739-460d-a514-fd5ba94761b6">
+    <data-source source="LOCAL" name="Django default" uuid="8cba6722-2309-4158-9407-4831a1f8aee1">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/startapp/settings.py</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://srv-db-plesk03.ps.kz:3306/ikbtukz_abaysys</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/startapp_db</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
